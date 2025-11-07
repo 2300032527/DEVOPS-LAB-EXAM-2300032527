@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./springbootexamproject
-          file: ./springbootexamproject/backend.Dockerfile
+          file: ./springbootexamproject/backend.dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ansible-labexam-backend:latest
 
@@ -39,6 +39,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./reactexamapp
-          file: ./reactexamapp/frontend.Dockerfile
+          file: ./reactexamapp/frontend.dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ansible-labexam-frontend:latest
